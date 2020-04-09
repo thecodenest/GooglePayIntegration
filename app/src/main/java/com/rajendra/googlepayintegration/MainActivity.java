@@ -37,13 +37,22 @@ public class MainActivity extends AppCompatActivity {
         msg = findViewById(R.id.status);
         pay = findViewById(R.id.pay);
 
+
+        //initialising default value
+        name.setText("RAJENDRA SINGH BISHT");
+        upiId.setText("7409484009@kotak");
+        note.setText("donation");
+        amount.setText("10");
+
         pay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+
+
                 payerName = name.getText().toString();
                 UpiId = upiId.getText().toString();
-                msgNote = msg.getText().toString();
+                msgNote = note.getText().toString();
                 sendAmount = amount.getText().toString();
 
                 if(!payerName.equals("") && !upiId.equals("") && !msgNote.equals("") && !sendAmount.equals("")){
@@ -52,6 +61,12 @@ public class MainActivity extends AppCompatActivity {
                     payWithGpay(GPAY_PACKAGE_NAME);
 
                 }
+                else {
+                    Toast.makeText(MainActivity.this,"Fill all above details and try again.", Toast.LENGTH_SHORT).show();
+
+
+                }
+
 
 
             }

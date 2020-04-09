@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Transaction note"
-            android:text="Donate" />
+            android:singleLine="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -41,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter amount"
-            android:text="10" />
+            android:singleLine="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -60,7 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="UPI ID"
-            android:text="7409484009@kotak" />
+            android:singleLine="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
@@ -88,7 +88,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Name"
-            android:text="RAJENDRA SINGH BISHT" />
+            android:singleLine="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
