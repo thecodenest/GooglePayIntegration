@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     TextView msg;
     Button pay;
     Uri uri;
+    String approvalRefNo;
 
     public static String payerName, UpiId, msgNote, sendAmount, status;
 
@@ -107,9 +108,10 @@ public class MainActivity extends AppCompatActivity {
 
         if (data != null) {
             status = data.getStringExtra("Status").toLowerCase();
+            approvalRefNo = data.getStringExtra("txnRef");
         }
         if ((RESULT_OK == resultCode) && status.equals("success")) {
-            Toast.makeText(MainActivity.this, "Transaction successful.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "Transaction successful. "+approvalRefNo, Toast.LENGTH_SHORT).show();
             msg.setText("Transaction successful of ₹" + sendAmount);
             msg.setTextColor(Color.GREEN);
 
